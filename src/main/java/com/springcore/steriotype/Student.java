@@ -1,5 +1,7 @@
 package com.springcore.steriotype;
 
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -11,10 +13,29 @@ public class Student {
 	private String studentNAme;
 	@Value("Pune")
 	private String city;
+	@Value("#{results}")
+	private Map<String, Integer> result;
+
+	/**
+	 * @return the result
+	 */
+	public Map<String, Integer> getResult() {
+		return result;
+	}
+
+	/**
+	 * @param result the result to set
+	 */
+	public void setResult(Map<String, Integer> result) {
+		this.result = result;
+	}
+
+	
 
 	@Override
 	public String toString() {
-		return "Student [studentId=" + studentId + ", studentNAme=" + studentNAme + ", city=" + city + "]";
+		return "Student [studentId=" + studentId + ", studentNAme=" + studentNAme + ", city=" + city + ", result="
+				+ result + "]";
 	}
 
 	/**

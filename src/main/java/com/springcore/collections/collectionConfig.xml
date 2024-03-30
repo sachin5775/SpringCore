@@ -34,7 +34,7 @@
 	
 	<property name="cources">
 	<map>
-	<entry key="Java" value="4 months"></entry>
+	<entry key="Java" value="4 months" ></entry>
 	<entry key="Python" value="2 months"></entry>
 	<entry key="C" value="2 months"></entry>
 	</map>

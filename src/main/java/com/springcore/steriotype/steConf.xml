@@ -11,7 +11,12 @@
     http://www.springframework.org/schema/util 
     http://www.springframework.org/schema/util/spring-util.xsd">
 
-<context:component-scan base-package="com/springcore/steriotype"></context:component-scan>	
+	<context:component-scan
+		base-package="com/springcore/steriotype"></context:component-scan>
 
-
+	<util:map map-class="java.util.HashMap" id="results">
+		<entry key="Java"  value="86" value-type="java.lang.Integer">
+		</entry>
+		<entry key="Python" value="87" value-type="java.lang.Integer"></entry>
+	</util:map>
 </beans>
