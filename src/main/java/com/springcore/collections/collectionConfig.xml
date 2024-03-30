@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+  https://www.springframework.org/schema/beans/spring-beans.xsd
+   https://www.springframework.org/schema/context
+    https://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean name="Emp1" class ="com.springcore.collections.Emp">
+	<!-- private int empId;
+	private String empName;
+	private List<String> empCitys;
+	private Set<String> empOccupations;
+	private HashMap<String, String> cources; -->
+	<property name="empId" value="11"></property>
+	<property name="empName" value="Sachin"></property>
+	<property name="empCitys">
+	<list>
+	<value>Tornale</value>
+	<value>fattepur</value>
+	<value>Jamner</value>
+	<value>Jalgaon</value>
+	</list>
+	</property>
+	<property name="empOccupations">
+	<set>
+	<value>Student</value>
+	<value>Teacher</value>
+	<value>Doctor</value>
+	<value>Engineer</value>
+	</set>
+	</property>
+	
+	<property name="cources">
+	<map>
+	<entry key="Java" value="4 months"></entry>
+	<entry key="Python" value="2 months"></entry>
+	<entry key="C" value="2 months"></entry>
+	</map>
+	</property>
+	
+	<property name="properties">
+	<props>
+	<prop key="name">Sachin</prop>
+	<prop key="Position">Developer</prop>
+	</props>
+	</property>
+	<property name="student" ref="Student1"/>
+</bean>
+
+<bean name="Student1" class="com.springcore.Student" p:studentId="123" p:studentName="Divya" p:studentAddress="Ravala" >
+
+</bean>
+
+
+</beans>

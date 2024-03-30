@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans.xsd
+   http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd
+    http://www.springframework.org/schema/util 
+    http://www.springframework.org/schema/util/spring-util.xsd">
+<context:annotation-config></context:annotation-config>
+
+
+	<util:properties id="props">
+		<prop key="name">Sachin</prop>
+		<prop key="Position">Developer</prop>
+	</util:properties>
+	<util:list list-class="java.util.LinkedList" id="cityList">
+		<value>Tornale</value>
+		<value>fattepur</value>
+		<value>Jamner</value>
+		<value>Jalgaon</value>
+	</util:list>
+	<util:set set-class="java.util.LinkedHashSet" id="occupations">
+		<value>Student</value>
+		<value>Teacher</value>
+		<value>Doctor</value>
+		<value>Engineer</value>
+	</util:set>
+	<util:map map-class="java.util.TreeMap" id="courcesss">
+		<entry key="Java" value="4 months"></entry>
+		<entry key="Python" value="2 months"></entry>
+		<entry key="C" value="2 months"></entry>
+	</util:map>
+	<bean name="Emp1"
+		class="com.springcore.collections.standalone.Emp">
+		<property name="empId" value="11"></property>
+		<property name="empName" value="Sachin"></property>
+		<property name="empCitys" ref="cityList">
+		</property>
+		<property name="empOccupations" ref="occupations">
+		</property>
+
+		<property name="cources">
+			<ref bean="courcesss" />
+		</property>
+
+		<property name="properties" ref="props">
+		</property>
+		<property name="student" ref="Student1" />
+	</bean>
+	<bean name="emp2" class="com.springcore.collections.standalone.Emp">
+		<property name="empId" value="12"></property>
+		<property name="empName" value="Sujit"></property>
+		<property name="empCitys" ref="cityList">
+		</property>
+		<property name="empOccupations" ref="occupations">
+		</property>
+
+		<property name="cources">
+			<ref bean="courcesss" />
+		</property>
+
+		<property name="properties" ref="props">
+		</property>
+		<property name="student" ref="Student1" />
+	</bean>
+	
+
+
+</beans>
