@@ -8,6 +8,12 @@ public class TestSterio {
 				"com/springcore/steriotype/steConf.xml");
 
 		Student std = context.getBean("std", Student.class);
+		Student std2 = context.getBean("std", Student.class);
+		std.setStudentId(1);
+		std2.setStudentId(2);
 		System.out.println(std);
+		System.out.println(std2);
+		System.out.println(std.hashCode());
+		System.out.println(std2.hashCode());
 	}
 }

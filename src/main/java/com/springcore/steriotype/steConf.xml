@@ -17,6 +17,6 @@
 	<util:map map-class="java.util.HashMap" id="results">
 		<entry key="Java"  value="86" value-type="java.lang.Integer">
 		</entry>
-		<entry key="Python" value="87" value-type="java.lang.Integer"></entry>
+		<entry key="Pythod"  value="87" value-type="java.lang.Integer"></entry>
 	</util:map>
 </beans>

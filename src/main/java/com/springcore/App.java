@@ -13,9 +13,15 @@ public class App {
 		ApplicationContext context = new ClassPathXmlApplicationContext("conf.xml");
 		Student student1 = (Student) context.getBean("Student1");
 		Student student2 = (Student) context.getBean("Student2");
+		Student student22 = (Student) context.getBean("Student2");
 		Student student3 = (Student) context.getBean("Student3");
 		System.out.println(student1);
 		System.out.println(student2);
 		System.out.println(student3);
+		
+		System.out.println(student1.hashCode());
+		System.out.println(student2.hashCode());
+		System.out.println(student22.hashCode());
+		System.out.println(student3.hashCode());
 	}
 }

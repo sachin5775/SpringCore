@@ -21,7 +21,7 @@
 		<property name="studentName" value="Sachin"/>
 		<property name="studentAddress" value="Tornale"/>
 	</bean>
-	<bean class="com.springcore.Student" name="Student2">
+	<bean class="com.springcore.Student" name="Student2" scope="prototype">
 		<property name="studentId" value="55555"/>
 		<property name="studentName" value="Sujit"/>
 		<property name="studentAddress" value="Jamner"/>
