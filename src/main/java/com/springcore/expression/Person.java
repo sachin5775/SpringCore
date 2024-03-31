@@ -13,7 +13,7 @@ import com.springcore.steriotype.Student;
 @Component("person1")
 @Scope("prototype")
 public class Person {
-	@Value("1")
+	@Value("6")
 	private int id;
 	@Value("#{cityList}")
 	private List<String> cities;
@@ -22,6 +22,54 @@ public class Person {
 	private Student student2;
 	@Value("#{55+67+91}")
 	private double marks;
+	@Value("#{T(java.lang.Math).sqrt(99)}")
+	private double squareroot;
+	@Value("#{T(java.lang.Math).E}")
+	private float e;
+	@Value("#{ new com.springcore.expression.Person() == null}")
+	private boolean zflag;
+
+	/**
+	 * @return the e
+	 */
+	public float getE() {
+		return e;
+	}
+
+	/**
+	 * @param e the e to set
+	 */
+	public void setE(float e) {
+		this.e = e;
+	}
+
+	/**
+	 * @return the flag
+	 */
+	public boolean isFlag() {
+		return zflag;
+	}
+
+	/**
+	 * @param flag the flag to set
+	 */
+	public void setFlag(boolean zflag) {
+		this.zflag = zflag;
+	}
+
+	/**
+	 * @return the squareroot
+	 */
+	public double getSquareroot() {
+		return squareroot;
+	}
+
+	/**
+	 * @param squareroot the squareroot to set
+	 */
+	public void setSquareroot(double squareroot) {
+		this.squareroot = squareroot;
+	}
 
 	/**
 	 * @return the marks
@@ -51,7 +99,6 @@ public class Person {
 		this.student2 = student2;
 	}
 
-	
 	/**
 	 * @return the id
 	 */
@@ -82,7 +129,8 @@ public class Person {
 
 	@Override
 	public String toString() {
-		return "Person [id=" + id + ", cities=" + cities + ", student2=" + student2 + "]";
+		return "Person [id=" + id + ", cities=" + cities + ", student2=" + student2 + ", marks=" + marks
+				+ ", squareroot=" + squareroot + ", e=" + e + ", flag=" + zflag + "]";
 	}
 
 }
