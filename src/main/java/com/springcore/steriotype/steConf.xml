@@ -19,4 +19,11 @@
 		</entry>
 		<entry key="Pythod"  value="87" value-type="java.lang.Integer"></entry>
 	</util:map>
+	
+	<bean name="std1" class="com.springcore.steriotype.Student">
+	<property name="studentId" value="55"/>
+	<property name="studentNAme" value="Rajput"/>
+	<property name="city" value="Tornale"/>
+	<property name="result" ref="results"></property>
+	</bean>
 </beans>
